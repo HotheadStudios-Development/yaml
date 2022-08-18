@@ -1,6 +1,7 @@
 project "yaml"
 	kind "StaticLib"
 	language "C++"
+	staticruntime "on"
 
 	targetdir ("%{wks.location}/Build_Data/bin/" .. outputDir .. "/%{prj.name}")
 	objdir ("%{wks.location}/Build_Data/bin-obj/" .. outputDir .. "/%{prj.name}")
@@ -41,3 +42,8 @@ project "yaml"
 	filter "configurations:Release"
 		runtime "Release"
 		optimize "on"
+
+	filter "configurations:Dist"
+		runtime "Release"
+		optimize "on"
+        symbols "off"
