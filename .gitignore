@@ -1,3 +1,6 @@
 build/
 /tags
 /bazel-*
+yaml.vcxproj
+yaml.vcxproj.filters
+yaml.vcxproj.user
